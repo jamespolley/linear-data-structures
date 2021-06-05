@@ -1,4 +1,4 @@
-from musicplayer import MusicPlayer
+from MusicPlayer import MusicPlayer
 
 
 # Create an empty MusicPlayer.
