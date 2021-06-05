@@ -1,4 +1,4 @@
-# Single Order of Customer Orders (Node)
+# Single Order in Customer Orders (Node)
 class Order:
     def __init__(self, number, description, next=None):
         self.number = number
@@ -18,7 +18,7 @@ class Order:
         self.next = next
     
     def __repr__(self):
-        return '{0}\n{1}\n'.format(
+        return '{0}\n{1}'.format(
             str(self.number).zfill(3), self.description)
 
 # Main Customer Orders Class to Hold Orders (Queue)
@@ -40,15 +40,15 @@ class CustomerOrders:
             self.tail = order
         self.size += 1
         self.next_number += self.number_increment
-        print('NEW ORDER:\n' + str(order))
+        print('NEW ORDER:\n' + str(order) + '\n')
     
     def peek(self):
-        print('TO SERVE:\n' + str(self.head))
+        print('TO SERVE:\n' + str(self.head) + '\n')
         return self.head
 
     def serve_order(self):
         if self.is_empty():
-            print('CURRENTLY NO CUSTOMER ORDERS')
+            print('CURRENTLY NO CUSTOMER ORDERS\n')
             return
         order = self.head
         if self.size == 1:
@@ -57,9 +57,11 @@ class CustomerOrders:
         else:
             self.head = self.head.get_next()
         self.size -= 1
+        print('NOW SERVING:\n' + str(order) + '\n')
         return order
 
     def get_size(self):
+        print('CURRENTLY {} CUSTOMER ORDERS\n'.format(self.size))
         return self.size
 
     def is_empty(self):
