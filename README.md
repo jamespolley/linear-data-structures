@@ -5,6 +5,7 @@ Examples of the following linear data structures:
 * __Linked List__ - To Do List
 * __Doubly Linked List__ - Music Player
 * __Queue__ - Customer Orders
+* __Stack__ - Stack
 
 ## Usage
 See _<span>example.py</span>_ file in each folder for useage examples.
